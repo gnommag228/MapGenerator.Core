@@ -23,6 +23,6 @@ public class MapDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=map_generator_db;Username=postgres;Password=89026241309v");
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=map_generator_db;Username=postgres;Password=postgres");
     }
 }
