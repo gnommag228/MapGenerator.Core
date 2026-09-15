@@ -11,8 +11,8 @@ namespace MapGenerator.Core
       public int Width { get; set; }
       public int Height { get; set; }
       public Tile[,] Tiles { get; set; }
-        public Map(int width, int height)
-        {
+      public Map(int width, int height)
+      {
             Tiles = new Tile[width, height];
             Width = width;
             Height = height;
@@ -24,7 +24,7 @@ namespace MapGenerator.Core
                 }
             }
               
-        }
+      }
 
     }
 }
