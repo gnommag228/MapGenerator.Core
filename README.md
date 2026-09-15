@@ -24,7 +24,7 @@ The core architecture follows clean OOP principles, decouples generation logic f
 ---
 
 ## Project Structure
-
+```text
 MapGenerator2D/
 ├── MapGenerator.Core/              # Domain logic & generation engine
 │   ├── IMapGenerationStrategy.cs   # Strategy interface
@@ -33,7 +33,7 @@ MapGenerator2D/
 │   ├── Map.cs                      # 2D Grid map representation
 │   └── Tile.cs                     # Tile definitions & TileType enum
 └── MapGenerator.ConsoleApp/
-
+```
 --------------------------------------------------------------------------------------------------
 Usage Example:
 
@@ -48,8 +48,9 @@ Console.WriteLine($"Tile type at (5, 10): {tile.Type}");
 
 -----------------------------------------------------------------
 
-Output Preview (Console Visualizer):
+## Output Preview (Console Visualizer)
 
+```text
 #########################
 #.......................#
 #..T..TP.TP.T..T..T..T..#
@@ -59,6 +60,7 @@ Output Preview (Console Visualizer):
 #..TP.T..TP....T..T..T..#
 #.......................#
 #########################
+```
 
 
 # — Wall / Perimeter
