@@ -63,7 +63,7 @@ Console.WriteLine($"Tile type at (5, 10): {tile.Type}");
 ```
 
 
-# — Wall / Perimeter
+//# — Wall / Perimeter
 
 . — Walkable Floor
 
