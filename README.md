@@ -16,10 +16,15 @@ The core architecture follows clean OOP principles, decouples generation logic f
 ---
 
 ## Tech Stack
+- **Framework:** .NET 9 / C# 13
+- **ORM:** Entity Framework Core 9.0
+- **Database:** PostgreSQL 17
+- **Patterns:** Factory Method, Strategy Pattern, Repository Pattern
 
-* **Language:** C# 13 / .NET 9
-* **Architecture:** Class Library (`MapGenerator.Core`) + Visualizer (`MapGenerator.ConsoleApp`)
-* **Testing & Tools:** Git, NUnit, GitHub Desktop
+## Persistence & Database Integration
+The project uses EF Core with PostgreSQL to persist generated map instances along with their metadata.
+- **`EnsureCreatedAsync()`** handles lightweight schema creation automatically.
+- Maps are serialized into plain ASCII layout strings for efficient storage and inspection.
 
 ---
 
@@ -34,7 +39,7 @@ MapGenerator2D/
 │   └── Tile.cs                     # Tile definitions & TileType enum
 └── MapGenerator.ConsoleApp/
 ```
---------------------------------------------------------------------------------------------------
+---
 Usage Example:
 
 using MapGenerator.Core;
@@ -46,7 +51,7 @@ Map restaurantMap = MapGeneratorFactory.CreateRestaurantMap(width: 25, height: 2
 Tile tile = restaurantMap.Tiles[5, 10];
 Console.WriteLine($"Tile type at (5, 10): {tile.Type}");
 
------------------------------------------------------------------
+---
 
 ## Output Preview (Console Visualizer)
 
